@@ -1,10 +1,10 @@
 Install and Configure Eclipse
 =============================
-This documentation will guide you to install and configure your Eclipse environnment with the necessary tools needed to run OCCIware's project.
+This documentation will guide you to install and configure your Eclipse environment with the necessary tools needed to run OCCIware's project.
 
 Prerequisite
 ------------
-Download the Eclipse installer which corresponds to your platform here: https://wiki.eclipse.org/Eclipse_Installer.
+Download the Eclipse installer, which corresponds to your platform here: https://wiki.eclipse.org/Eclipse_Installer.
 
 Install and Configuration
 -------------------------
