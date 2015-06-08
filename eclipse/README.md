@@ -7,7 +7,7 @@ Windows, Linux
 * Download the Eclipse installer, which corresponds to your platform here: https://wiki.eclipse.org/Eclipse_Installer.
 * Launch the installer.
 * Switch in advanced mode.
-* On the `Product` page choose `Eclipse IDE for Java Developers` and click the `Next` button.
+* On the `Product` page choose `Eclipse IDE for Java Developers` and `Latest release (Luna)` (about to change) and click the `Next` button.
 * On the `Project` page choose `Eclipse.org` and click on the `+` button situated on the top of the page and paste this URL: https://raw.githubusercontent.com/occiware/ecore/master/clouddesigner/org.occiware.clouddesigner.dev/OcciwareDev.setup
 * Follow the instructions to finish the settings.
 
