@@ -2,7 +2,7 @@ Install and Configure Eclipse
 =============================
 This documentation will guide you to install and configure your Eclipse environment with the necessary plugins needed to run the OCCIware project.
 
-* Download an Eclipse Mars https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr
+* Download an Eclipse Mars http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/marsr
 * Launch Eclipse 
 * Install the following tools from http://download.eclipse.org/releases/mars: Mylyn WikiText (for Wiki syntax support), EMF SDK, Acceleo Core SDK, Xtext Complete SDK, Sirius Runtime IDE, Sirius Specification Environment, OCL Examples and Editors SDK
 * Then install the K3 feature (for the Docker Connector) from http://www.kermeta.org/k3/update/ (only once previous deps have been installed, otherwise they will be)
