@@ -4,22 +4,23 @@ This documentation will guide you to install and configure your Eclipse environm
 
 NB: Here is not described how to modify and/or compile the below mentioned "ecore" projects (but you can do it , under your own risk, if you really need it).
 
-* Download an Eclipse Mars http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/marsr
-* Launch Eclipse : "/eclipse$ ./eclipse"
-* In eclipse: install the following tools from http://download.eclipse.org/releases/mars: Mylyn WikiText (for Wiki syntax support, normally pre-installed/in-built eclipse mars vers), Eclipse Modeling Framework (EMF SDK & EMF COMPARE), Acceleo Core SDK, Xtext Complete SDK, Sirius Specification Environment (check that Sirius Runtime is included), OCL Examples and Editors SDK
-* In the workspace directory: git-clone the main project https://github.com/occiware/ecore (containing all projects). For example : "/workspace$ git clone git@github.com:occiware/ecore.git"
-* In eclipse: import the all projects from "/workspace/ecore" directory (File > Import > Existing Project into Workspace)
-* if there are still compile errors, close projects that are in "trash" and "xtext" path (including occi2ecore, clouddesigner.occi.runtime) if they don't compile. Check also the  Java version (right-click on project > properties).
+1. download an Eclipse Mars http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/marsr 
+2. launch Eclipse : "/eclipse$ ./eclipse"
+3. in eclipse: install the following tools from http://download.eclipse.org/releases/mars: Mylyn WikiText (for Wiki syntax support, normally pre-installed/in-built eclipse mars vers), Eclipse Modeling Framework (EMF SDK & EMF COMPARE), Acceleo Core SDK, Xtext Complete SDK, Sirius Specification Environment (check that Sirius Runtime is included), OCL Examples and Editors SDK.
+4. in the workspace directory: git-clone the main project https://github.com/occiware/ecore (containing all projects). For example : "/workspace$ git clone git@github.com:occiware/ecore.git"
+5. in eclipse: import the all projects from "/workspace/ecore" directory (File > Import > Existing Project into Workspace).
+6. verify that there are no errors on compiled projects. If errors are marked and the projects can't compile, close projects that are in "trash" and in "xtext" path (including occi2ecore, clouddesigner.occi.runtime). Also check the Java (JRE) version (right-click on project > properties).
 
 Getting started :
 -----------------
 Here is explained how to create and configure a very basic Extention model.
 
-* to start OCCIware Studio, in the installed Eclipse (see "Install and Configure Eclipse"), right click on any project > Run as Eclipse Application
-* in it, open "Modeling" perspective (window > perspective > open perspective > other > Modeling)
-* to create new modeling project : File > New > Other > (Cloud Designer > OCCI Extension Project)
-* to add new configuration files : File > New > Other > (Cloud Designer > OCCI Configuration File), then select the parent folder and extentions. 
-* Start modeling some new OCCI models.
+1. to start OCCIware Studio, in the installed Eclipse (see "Install and Configure Eclipse"), right click on any project > Run as Eclipse Application
+2. in it, open "Modeling" perspective (window > perspective > open perspective > other > Modeling)
+3. Start modeling some new OCCI models.
+   - to create new modeling project : File > New > Other > (Cloud Designer > OCCI Extension Project)
+   - to add new configuration files (models) : File > New > Other > (Cloud Designer > OCCI Configuration File), then select the parent folder and extentions. 
+
 
 
 Example of use - linked-data :
@@ -27,21 +28,20 @@ Example of use - linked-data :
 Here is explained how to create and configure a "Liked-Data Extention" simple model, which should illustrate the way of working with OCCIware tools.
 
 * to create new modeling project : menu File > New > Other > (Cloud Designer > OCCI Extension Project) and enter the following :
+    - name: org.occiware.linkeddata
+    - extention name: linked-data
+    - extention scheme: http://www.occiware.org/scheme/linked-data# (don't forget the # sharp)
 
-    name : org.occiware.linkeddata
-    extention name : linked-data
-    extention scheme: http://www.occiware.org/scheme/linked-data# (don't forget the # sharp)
-
-   * 20150612 FEEDBACK missing : delete, change parent using mouse (but can be done in properties), constraint on link's source & target in metamodel (now in OCL)
+   ** 20150612 FEEDBACK missing : delete, change parent using mouse (but can be done in properties), constraint on link's source & target in metamodel (now in OCL)
 
 * using the designer view "Palette" : outside the base "core" Extension (faded-in gray rectangle), create "Project" & "Model" kinds, and their parent relationships to "Resource"; create "ProjectToModelLink" kind, and its parent relationship to "Link". Fill their terms and titles (ex. term="project" & title="Project Resource" for "Project" kind).
-   * NB. OCCI mixins are similar but not exactly the same thing as Datacore mixins.
+  - NB. OCCI mixins are similar but not exactly the same thing as Datacore mixins.
 * create DataType "Version" as type "long" 
-   * mutable=false means readonly (even if changeable / computed) 20150812 TODO Q DISAPPEARED, WHY ?
+   - mutable=false means readonly (even if changeable / computed). 20150812 TODO Q DISAPPEARED, WHY ?
 * for "Project" & "Model" kinds, create attribute "name". To "Model" kind only, create attributes "version" & "majorVersion" with Type as "Version[long]".
-   * mutable=false means readonly (even if changeable / computed)
+   - mutable=false means readonly (even if changeable / computed)
 * right-click on the "*.occie" file > Generate > Generate doc (textile), & XML (for configuring erocci) (LATER Generate Curl for POSTing OCCI Resources to a configured erocci server - TODO but only for conf & Generate Conf only for Docker). The files will be generated in "/src-gen" sub-directory.
-   * 20150612 FEEDBACK generated stuff is missing generated type (& custom data types)
+   - 20150612 FEEDBACK generated stuff are missing: generated type (& custom data types)
 
 Advanced uses :
 ---------------
