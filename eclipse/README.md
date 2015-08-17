@@ -23,7 +23,7 @@ Here is explained how to create and configure a very basic Extention model.
 
 
 
-Example of use - linked-data :
+Usage example - linked-data :
 ------------------------------
 Here is explained how to create and configure a "Liked-Data Extention" simple model, which should illustrate the way of working with OCCIware tools.
 
@@ -42,6 +42,8 @@ Here is explained how to create and configure a "Liked-Data Extention" simple mo
    - mutable=false means readonly (even if changeable / computed)
 * right-click on the "*.occie" file > Generate > Generate doc (textile), & XML (for configuring erocci) (LATER Generate Curl for POSTing OCCI Resources to a configured erocci server - TODO but only for conf & Generate Conf only for Docker). The files will be generated in "/src-gen" sub-directory.
    - 20150612 FEEDBACK generated stuff are missing: generated type (& custom data types)
+
+![Liked-data model - sample image.](/eclipse/images/linked-data.png)
 
 Advanced uses :
 ---------------
