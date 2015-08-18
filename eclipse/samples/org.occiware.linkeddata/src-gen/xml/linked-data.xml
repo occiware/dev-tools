@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<occi:extension xmlns:occi="http://schemas.ogf.org/occi"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.ogf.org/occi occi.xsd " 
+    name="linked-data" >
+
+      <!-- Kind: Model -->
+      <occi:kind term="model" scheme="http://www.occiware.org/scheme/linked-data#" title="Model">
+        <occi:parent term="resource" scheme="http://schemas.ogf.org/occi/core#" />
+    	  	<occi:attribute 
+    	        name="name" 
+    	        type="xs:string" 
+    	        title="Name" />
+    	  	<occi:attribute 
+    	        name="version" 
+    	        type="xs:long" 
+    	        title="version" />
+    	  	<occi:attribute 
+    	        name="majorVersion" 
+    	        type="xs:long" 
+    	        title="MajorVersion" />
+      </occi:kind>
+      <!-- Kind: Project -->
+      <occi:kind term="project" scheme="http://www.occiware.org/scheme/linked-data#" title="Project">
+        <occi:parent term="resource" scheme="http://schemas.ogf.org/occi/core#" />
+    	  	<occi:attribute 
+    	        name="name" 
+    	        type="xs:string" 
+    	        title="Name" />
+      </occi:kind>
+      <!-- Kind: ProjectToModelLink -->
+      <occi:kind term="projectToModelLink" scheme="http://www.occiware.org/scheme/linked-data#" title="ProjectToModelLink">
+        <occi:parent term="link" scheme="http://schemas.ogf.org/occi/core#" />
+      </occi:kind>
+</occi:extension>

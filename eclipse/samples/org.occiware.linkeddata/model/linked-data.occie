@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi" name="linked-data" scheme="http://www.occiware.org/scheme/linked-data#">
+  <import href="platform:/plugin/org.occiware.clouddesigner.occi/model/Core.occie#/"/>
+  <kinds term="model" scheme="http://www.occiware.org/scheme/linked-data#" title="Model">
+    <attributes name="name" required="true">
+      <type href="platform:/plugin/org.occiware.clouddesigner.occi/model/Core.occie#//@types.0"/>
+    </attributes>
+    <attributes name="version" mutable="true" required="true" type="//@types.0"/>
+    <attributes name="majorVersion" mutable="true" type="//@types.0"/>
+    <parent href="platform:/plugin/org.occiware.clouddesigner.occi/model/Core.occie#//@kinds[term='resource']"/>
+  </kinds>
+  <kinds term="project" scheme="http://www.occiware.org/scheme/linked-data#" title="Project Resource">
+    <attributes name="name" required="true">
+      <type href="platform:/plugin/org.occiware.clouddesigner.occi/model/Core.occie#//@types.0"/>
+    </attributes>
+    <parent href="platform:/plugin/org.occiware.clouddesigner.occi/model/Core.occie#//@kinds[term='resource']"/>
+  </kinds>
+  <kinds term="projectToModelLink" scheme="http://www.occiware.org/scheme/linked-data#" title="Project to Model Link">
+    <parent href="platform:/plugin/org.occiware.clouddesigner.occi/model/Core.occie#//@kinds[term='link']"/>
+  </kinds>
+  <types name="Version" instanceClassName="long"/>
+</occi:Extension>

@@ -1,0 +1,77 @@
+h1. OCCI Extension: linked-data
+
+| *Name* | linked-data |
+| *Scheme* | http://www.occiware.org/scheme/linked-data# |
+
+h1. Imports
+
+| *Name* | *Scheme* |
+| <a href="core.textile">core</a> | http://schemas.ogf.org/occi/core# |
+
+h1. Kinds
+
+h2. Kind model
+
+| *Term* | model |
+| *Scheme* | http://www.occiware.org/scheme/linked-data# |
+| *Title* | Model |
+| *Parent* | <a href="core.textile#kind-resource">http://schemas.ogf.org/occi/core#resource</a> |
+
+h3. Attributes
+
+| *Attribute* | *Type* | *Required* | *Mutable* | *Default* | *Description* |
+| name | <a href="core.textile#datatype-string">String</a> | true | false |  |  |
+| version | <a href="linked-data.textile#datatype-version">Version</a> | true | true |  |  |
+| majorVersion | <a href="linked-data.textile#datatype-version">Version</a> | false | true |  |  |
+
+h3. Actions
+
+
+
+h2. Kind project
+
+| *Term* | project |
+| *Scheme* | http://www.occiware.org/scheme/linked-data# |
+| *Title* | Project |
+| *Parent* | <a href="core.textile#kind-resource">http://schemas.ogf.org/occi/core#resource</a> |
+
+h3. Attributes
+
+| *Attribute* | *Type* | *Required* | *Mutable* | *Default* | *Description* |
+| name | <a href="core.textile#datatype-string">String</a> | true | false |  |  |
+
+h3. Actions
+
+
+
+h2. Kind projectToModelLink
+
+| *Term* | projectToModelLink |
+| *Scheme* | http://www.occiware.org/scheme/linked-data# |
+| *Title* | ProjectToModelLink |
+| *Parent* | <a href="core.textile#kind-link">http://schemas.ogf.org/occi/core#link</a> |
+
+h3. Attributes
+
+
+h3. Actions
+
+
+
+
+
+h1. Mixins
+
+
+
+h1. Types
+
+h2. Datatype Version
+
+h3. Type long
+
+h3. Annotations
+
+
+
+

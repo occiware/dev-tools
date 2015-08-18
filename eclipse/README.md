@@ -20,6 +20,7 @@ Here is explained how to create and configure a very basic Extention model.
 3. Start modeling some new OCCI models.
    - to create new modeling project : File > New > Other > (Cloud Designer > OCCI Extension Project)
    - to add new configuration files (models) : File > New > Other > (Cloud Designer > OCCI Configuration File), then select the parent folder and extentions. 
+   - to import existing modeling projects : File > Import > (Existing Projects into Workspace)
 
 
 
@@ -32,16 +33,21 @@ Here is explained how to create and configure a "Liked-Data Extention" simple mo
     - extention name: linked-data
     - extention scheme: http://www.occiware.org/scheme/linked-data# (don't forget the # sharp)
 
-   ** 20150612 FEEDBACK missing : delete, change parent using mouse (but can be done in properties), constraint on link's source & target in metamodel (now in OCL)
+* using the designer view "Palette" (outside the base "core" Extension witch a faded-in gray rectangle shape) :
+  * create kinds "Project", "Model" and add their parent relationships to "Resource"
+  * create kind  "ProjectToModelLink" and add its parent relationship to "Link"
+  * for all created kinds, fill their terms and titles (ex. for "Project" => term="project", title="Project Resource").
+  * create DataType "Version" as type "long" 
+  * create attributes :
+    - "name" for "Project" & "Model" kinds
+    - "version" & "majorVersion" with Type as "Version[long]" for "Model" kind only
+* generate configuration and docs files : right-click on the "*.occie" file > Generate > Generate doc (textile), & XML (for configuring erocci) (LATER Generate Curl for POSTing OCCI Resources to a configured erocci server - TODO but only for conf & Generate Conf only for Docker). The files will be generated in "/src-gen" sub-directory.
 
-* using the designer view "Palette" : outside the base "core" Extension (faded-in gray rectangle), create "Project" & "Model" kinds, and their parent relationships to "Resource"; create "ProjectToModelLink" kind, and its parent relationship to "Link". Fill their terms and titles (ex. term="project" & title="Project Resource" for "Project" kind).
-  - NB. OCCI mixins are similar but not exactly the same thing as Datacore mixins.
-* create DataType "Version" as type "long" 
-   - mutable=false means readonly (even if changeable / computed). 20150812 TODO Q DISAPPEARED, WHY ?
-* for "Project" & "Model" kinds, create attribute "name". To "Model" kind only, create attributes "version" & "majorVersion" with Type as "Version[long]".
-   - mutable=false means readonly (even if changeable / computed)
-* right-click on the "*.occie" file > Generate > Generate doc (textile), & XML (for configuring erocci) (LATER Generate Curl for POSTing OCCI Resources to a configured erocci server - TODO but only for conf & Generate Conf only for Docker). The files will be generated in "/src-gen" sub-directory.
-   - 20150612 FEEDBACK generated stuff are missing: generated type (& custom data types)
+Important notes : 
+  * *20150612 FEEDBACK generated stuff are missing: generated type (& custom data types)*
+  * *20150612 FEEDBACK missing : delete or change parent using mouse (but can be done in properties), constraint on link's source & target in metamodel (now in OCL)*
+  * *OCCI mixins are similar but not exactly the same thing as Datacore mixins.*
+  * *mutable=false means readonly (even if changeable / computed). 20150812 TODO Q DISAPPEARED, WHY ?*
 
 ![Liked-data model - sample image.](/eclipse/images/linked-data.png)
 
@@ -52,5 +58,6 @@ Other interesting fonctions on using dev-tools.
 * to add constraints, specify them in OCL (within EMF, but won't be in exported OCCI) : either textual .ocl (but must be loaded each time with OCL > Load), or within textual .ecore
 * to edit the modeler : edit occi.design/ OCCIware.odesign
 * to add custom behaviours (computed attributes...) : generate EMF Java and code in it (this is the EMF way to do it)
+
 
 
