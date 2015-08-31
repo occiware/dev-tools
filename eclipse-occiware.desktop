@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse OCCIware Studio
+Comment=Eclipse OCCIware Studio
+GenericName=Studio
+Exec=/usr/local/bin/occiware-studio
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/eclipse-occiware/icon.png
+Categories=IDE;Development;
+StartupNotify=true
