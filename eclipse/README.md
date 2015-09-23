@@ -59,5 +59,28 @@ Other interesting fonctions on using dev-tools.
 * to edit the modeler : edit occi.design/ OCCIware.odesign
 * to add custom behaviours (computed attributes...) : generate EMF Java and code in it (this is the EMF way to do it)
 
+Generate code from models using Acceleo :
+-----------------------------------------
 
+The following steps allow to create an Acceleo generator based on the OCCI metamodel:
+- File > New > Acceleo Project
+- Select a project name (or use the default one, juste ensure it does not already exists)
+- Click "Next"
+- Add the OCCI metamodel URI: click on the "+" button then select "http://schemas.ogf.org/occi"
+- Select the root type of the generator: Extension or Configuration (depending whether you want to generate from an occie or occic extension)
+- Check the "Main template" & "Generate file" options
+- Click "Finish"
+- In the new project, open the "generate.mtl" file from the navigator view (left panel)
+- Set the generated file name. This can be a dynamic expression, e.g.:
+	file (extension.name, false, 'UTF-8')
+	or a static one:
+	file ('configuration.xml', false, 'UTF-8')
+ (this example is on purpose, as a Configuration doesn't have any attribute usable to generate a distinct name)
+- Inside of the "file" markups, write the generator: static text, dynamic text using ocl generation, templates calls.. 
+	Please refer to the acceleo documentation for more informations on how to write a generator.
+- To test the generator, right-click on the "generate.mtl" file et select "Run as > Launch Acceleo application"
+- Select the input model, the target directory, then click "Run"
+- Open the generated file in the target directory to check the result
 
+Tip: To ease the development of the generator, you can open both generator and result files and drag one of them in order to have both in view at the same time.
+To relaunch a generation, when the focus is on the generate.mtl file hit CTRL+F11 
