@@ -78,6 +78,7 @@ The following steps allow to create an Acceleo generator based on the OCCI metam
  (this example is on purpose, as a Configuration doesn't have any attribute usable to generate a distinct name)
 - Inside of the "file" markups, write the generator: static text, dynamic text using ocl generation, templates calls.. 
 	Please refer to the acceleo documentation for more informations on how to write a generator.
+	The extension documentation generator can be used as an inspiration: https://github.com/occiware/ecore/blob/master/clouddesigner/org.occiware.clouddesigner.occi.gen.doc/src/org/occiware/clouddesigner/occi/gen/doc/main/generate.mtl
 - To test the generator, right-click on the "generate.mtl" file et select "Run as > Launch Acceleo application"
 - Select the input model, the target directory, then click "Run"
 - Open the generated file in the target directory to check the result
