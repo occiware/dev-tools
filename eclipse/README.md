@@ -65,10 +65,28 @@ The following steps allow to create an Acceleo generator based on the OCCI metam
 - File > New > Acceleo Project
 - Select a project name (or use the default one, juste ensure it does not already exists)
 - Click "Next"
+
+![Acceleo Project](/eclipse/images/generator1.png)
+
+In the next window you have to set the generator options :
+
+![Generator](/eclipse/images/generator2.png)
+
 - Add the OCCI metamodel URI: click on the "+" button then select "http://schemas.ogf.org/occi"
-- Select the root type of the generator: Extension or Configuration (depending whether you want to generate from an occie or occic extension)
+- Select the Model to use (the root type of the generator): Extension or Configuration (depending whether you want to generate from an occie or occic extension)
+
+![Add the OCCI metamodel URI](/eclipse/images/generator3.png)
+
+![Select the root type of the generator](/eclipse/images/generator4.png)
+
+- And the Target project
+
+![Select the root type of the generator](/eclipse/images/generator5.png)
+
 - Check the "Main template" & "Generate file" options
 - Click "Finish"
+
+Then to execut the generator manually do as next:
 - In the new project, open the "generate.mtl" file from the navigator view (left panel). This file is located under the src/ directory, in the <project_name>.main package
 - Set the generated file name. This can be a dynamic expression, e.g.:
 	file (extension.name, false, 'UTF-8')
@@ -81,6 +99,7 @@ The following steps allow to create an Acceleo generator based on the OCCI metam
 - To test the generator, right-click on the "generate.mtl" file et select "Run as > Launch Acceleo application"
 - Select the input model (delete the "xmi" filter in the dialog in order to display all files), the target directory, then click "Run"
 - Open the generated file in the target directory to check the result
+![Select a](/eclipse/images/generator6.png)
 
 Tip: To ease the development of the generator, you can open both generator and result files and drag one of them in order to have both in view at the same time.
 To relaunch a generation, when the focus is on the generate.mtl file hit CTRL+F11 
