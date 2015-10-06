@@ -11,6 +11,14 @@ NB: Here is not described how to modify and/or compile the below mentioned "ecor
 5. in eclipse: import the all projects from "/workspace/ecore" directory (File > Import > Existing Project into Workspace).
 6. verify that there are no errors on compiled projects. If errors are marked and the projects can't compile, close projects that are in "trash" and in "xtext" path (including occi2ecore, clouddesigner.occi.runtime). Also check the Java (JRE) version (right-click on project > properties).
 
+### Install and launch Obeo's CloudDesigner version (beta)
+
+A new Eclipse based OCCIware CloudDesigner can be downloaded (eclipse IDE containing all required files) in: TODO
+
+1. Unzip the bundle, then launch the eclipse application (./eclipse).
+  - In case you cannot launch the eclipse, you can try by changin the file permissons (cd ~/folder/where/you/unpacked-it ; chmod +x ./eclipse ; ./eclipse)
+2. Select the workspace (you can type "./workspace" to put the data under the CloudDesigner installation directory.)
+
 Getting started :
 -----------------
 Here is explained how to create and configure a very basic Extention model.
@@ -59,7 +67,7 @@ Other interesting fonctions on using dev-tools.
 * to edit the modeler : edit occi.design/ OCCIware.odesign
 * to add custom behaviours (computed attributes...) : generate EMF Java and code in it (this is the EMF way to do it)
 
-Generate code from models using Acceleo :
+Generate code from models using Acceleo (on Obeo's CloudDesigner) :
 -----------------------------------------
 The following steps allow to create an Acceleo generator based on the OCCI metamodel:
 - File > New > Acceleo Project
