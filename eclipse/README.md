@@ -80,19 +80,8 @@ In the next window you have to set the generator options :
 
 ![Generator](/eclipse/images/generator2.png)
 
-- Add the OCCI metamodel URI: click on the "+" button then select "http://schemas.ogf.org/occi"
-- Select the Model to use (the root type of the generator): Extension or Configuration (depending whether you want to generate from an occie or occic extension)
-
-![Add the OCCI metamodel URI](/eclipse/images/generator3.png)
-
-![Select the root type of the generator](/eclipse/images/generator4.png)
-
-- And the Target project
-
-![Select the root type of the generator](/eclipse/images/generator5.png)
-
-- Check the "Main template" & "Generate file" options
-- Click "Finish"
+- Click on finish. This will open the Acceleo perpspective.
+- Modify the *.mtl file with whatever you want to put in the file.
 
 Then to execut the generator manually do as next:
 - In the new project, open the "generate.mtl" file from the navigator view (left panel). This file is located under the src/ directory, in the <project_name>.main package
@@ -104,8 +93,21 @@ Then to execut the generator manually do as next:
 - Inside of the "file" markups, write the generator: static text, dynamic text using ocl generation, templates calls.. 
 	Please refer to the acceleo documentation for more informations on how to write a generator.
 	The extension documentation generator can be used as an inspiration: https://github.com/occiware/ecore/blob/master/clouddesigner/org.occiware.clouddesigner.occi.gen.doc/src/org/occiware/clouddesigner/occi/gen/doc/main/generate.mtl
+
 - To test the generator, right-click on the "generate.mtl" file et select "Run as > Launch Acceleo application"
-- Select the input model (delete the "xmi" filter in the dialog in order to display all files), the target directory, then click "Run"
+- Add the OCCI metamodel URI: click on the "+" button then select "http://schemas.ogf.org/occi"
+- Select the input model (delete the "xmi" filter in the dialog in order to display all files), to use (the root type of the generator): Extension or Configuration (depending whether you want to generate from an occie or occic extension)
+
+![Add the OCCI metamodel URI](/eclipse/images/generator3.png)
+
+![Select the root type of the generator](/eclipse/images/generator4.png)
+
+- And select the Target (projectr) directory where the generated files are going to be stored.
+
+![Select the root type of the generator](/eclipse/images/generator5.png)
+
+- Check the "Main template" & "Generate file" options
+- Then click "Run"
 - Open the generated file in the target directory to check the result
 ![Select a](/eclipse/images/generator6.png)
 
