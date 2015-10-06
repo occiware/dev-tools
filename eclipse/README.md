@@ -102,12 +102,13 @@ Then to execut the generator manually do as next:
 
 ![Select the root type of the generator](/eclipse/images/generator4.png)
 
-- And select the Target (projectr) directory where the generated files are going to be stored.
+- And select the Target (project) directory where the generated files are going to be stored.
 
 ![Select the root type of the generator](/eclipse/images/generator5.png)
 
 - Check the "Main template" & "Generate file" options
-- Then click "Run"
+- Configuration : Runner => Java Application
+- Then click "Run".
 - Open the generated file in the target directory to check the result
 ![Select a](/eclipse/images/generator6.png)
 
